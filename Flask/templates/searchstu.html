@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查</title>
+</head>
+<body>
+<form action="{{url_for('searchstu')}}" method="post">
+    <table>
+        <tbody>
+            <tr>
+                <td>学号</td>
+                <td><input type="text" placeholder="请输入学号" name="number"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="提交"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<br/>
+{%if find%}
+您查找的学生信息为：{{find}}
+{%endif%}
+<br/>
+<a href="{{url_for('index')}}">跳转到首页</a>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<table border="2">
+    <tbody>
+        <tr>
+            <td><a href="{{url_for('delstu')}}">删除</a></td>
+        </tr>
+        <tr>
+            <td><a href="{{url_for('addstu')}}">增</a></td>
+        </tr>
+        <tr>
+            <td><a href="{{url_for('altstu')}}">改</a></td>
+        </tr>
+        <tr>
+            <td><a href="{{url_for('searchstu')}}">查</a></td>
+        </tr>
+    </tbody>
+</table>
+<table border="1">
+    {% for i in student %}
+            <tr>
+                <td><ul><li>{{i}}</li></ul></td>
+            </tr>
+        {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+</head>
+<body>
+<form action="{{url_for('altstu')}}" method="post">
+    <table>
+        <tbody>
+            <tr>
+                <td>请输入要修改的学号</td>
+                <td><input type="text" placeholder="请输入学号" name="altnumber"></td>
+            </tr>
+            <tr>
+                <td>请输入要修改的姓名</td>
+                <td><input type="text" placeholder="请输入姓名" name="altname"></td>
+            </tr>
+            <tr>
+                <td>请输入要修改的院系</td>
+                <td><input type="text" placeholder="请输入院系" name="altdepartment"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="提交"></td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+<br/>
+<a href="{{url_for('index')}}">跳转到首页</a>
+</body>
+</html>
